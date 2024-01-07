@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Data to Flask</title>
+</head>
+<body>
+    <h1>Send Data to Flask</h1>
+    <div>
+        <label for="inputArray">Input Array:</label>
+        <input type="text" id="inputArray" placeholder="Enter input array">
+        <button onclick="sendData()">Send Data</button>
+    </div>
+    
+    <script>
+        function sendData() {
+            const inputArray = document.getElementById('inputArray').value;
+
+            // Check if input is not empty
+            if (!inputArray) {
+                alert("Please enter an input array.");
+                return;
+            }
+
+            // Create a JSON object with the input array
+            const data = { "input_array": JSON.parse("[" + inputArray + "]") };
+
+            // Make a POST request to the Flask server
+            fetch('http://127.0.0.1:5000/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                // Handle the result
+                console.log(result);
+                alert("Prediction: " + result.prediction);
+            })
+            .catch(error => {
+                // Handle errors
+                console.error('Error:', error);
+                alert("An error occurred. Please check the console for details.");
+            });
+        }
+    </script>
+</body>
+</html>
