@@ -6,7 +6,6 @@ import { useRoutes,Route,Routes } from "react-router-dom";
 import './css/style.css';
 
 import './charts/ChartjsConfig';
-
 import Dashboard from './pages/Dashboard';
 
 import RegisterAndLogin from './pages/Registers';

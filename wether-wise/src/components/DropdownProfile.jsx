@@ -79,7 +79,7 @@ function DropdownProfile({
                 to="/"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
-                Sign Out
+                Sign Out..
               </Link>
             </li>
           </ul>

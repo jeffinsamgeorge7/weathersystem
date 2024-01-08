@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
 import Regis from '../partials/Login/newregist';
