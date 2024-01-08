@@ -112,7 +112,7 @@ function DropdownFilter({
                   onClick={() => setDropdownOpen(false)}
                   onBlur={() => setDropdownOpen(false)}
                 >
-                  Apply
+                  Apply..
                 </button>
               </li>
             </ul>
