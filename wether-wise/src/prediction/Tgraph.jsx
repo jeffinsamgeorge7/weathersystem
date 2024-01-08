@@ -102,19 +102,28 @@ const LineGraph2 = () => {
   };
 
   return (
-    <div>
-      <h1>Temperature Data Over Time</h1>
-      <Line data={temperatureData} options={options} />
-
-      <h1>Humidity Data Over Time</h1>
-      <Line data={humidityData} options={options} />
-
-      <h1>Rain Data Over Time</h1>
-      <Line data={rainData} options={options} />
-
-      <h1>Pressure Data Over Time</h1>
-      <Line data={pressureData} options={options} />
+     <><div className="flex">
+        <div className="w-1/2">
+          <h1>Temperature Data Over Time</h1>
+          <Line data={temperatureData} options={options} />
+        </div>
+        <div className="w-1/2">
+          <h1>Humidity Data Over Time</h1>
+          <Line data={humidityData} options={options} />
+        </div>
     </div>
+
+    <div className="flex">
+        <div className="w-1/2">
+          <h1>Rain Data Over Time</h1>
+          <Line data={rainData} options={options} />
+        </div>
+        <div className="w-1/2">
+          <h1>Pressure Data Over Time</h1>
+          <Line data={pressureData} options={options} />
+        </div>
+    </div>
+    </>
   );
 };
 
