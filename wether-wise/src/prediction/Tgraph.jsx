@@ -102,49 +102,33 @@ const LineGraph2 = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <><div className="flex">
+    <>
+    <div className="flex w-96">
         <div className="w-full">
           <h1>Temperature Data Over Time</h1>
           <Line data={temperatureData} options={options} />
-        </div>
-        
-    </div>
-    <div className="flex">
-    <div className="w-full">
-          <h1>Humidity Data Over Time</h1>
-          <Line data={humidityData} options={options} />
-        </div>
-      </div>
-    <div className="flex flex-col">
-        <div className="w-full">
-          <h1>Rain Data Over Time</h1>
-          <Line data={rainData} options={options} />
-        </div>
-       
-    </div>
-    <div className="flex">
-        
-        <div className="w-full">
-=======
-     <><div className="flex">
-        <div className="w-1/2">
-          <h1>Temperature Data Over Time</h1>
-          <Line data={temperatureData} options={options} />
-        </div>
-        <div className="w-1/2">
-          <h1>Humidity Data Over Time</h1>
-          <Line data={humidityData} options={options} />
-        </div>
+        </div>  
+         
     </div>
 
     <div className="flex">
-        <div className="w-1/2">
+      <div className="w-full">
+          <h1>Humidity Data Over Time</h1>
+          <Line data={humidityData} options={options} />
+        </div>
+    </div>
+    <div className="flex ">
+        <div className="w-full">
           <h1>Rain Data Over Time</h1>
           <Line data={rainData} options={options} />
         </div>
-        <div className="w-1/2">
->>>>>>> 6f52667003b86479a441fe6a54c8b2c1f1cfff3e
+    </div>
+
+    
+
+    <div className="flex">
+       
+        <div className="w-full">
           <h1>Pressure Data Over Time</h1>
           <Line data={pressureData} options={options} />
         </div>
