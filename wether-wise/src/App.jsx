@@ -17,6 +17,8 @@ import Allone from './pages/WethTable';
 import LineGraph from './prediction/linegraphs';
 import Allgraph from './pages/allgrapgh';
 import Userdash from './pages/Userdash'
+import Userdatas from './partials/Login/Userdata';
+import Emplist from './pages/emplist';
 //import Ntable from './partials/Login/wetherdata'
 
 function App() {
@@ -30,7 +32,7 @@ function App() {
     <Route path="/Dashboard" element={<UserDash/>} />
     <Route path="/list" element={<Allone/>} />
     <Route path="/graph" element={<LineGraph/>} />
-    <Route path="/userlist" element={<Userdash/>} />
+    <Route path="/userlist" element={<Emplist/>} />
 
   </Routes>
   )
